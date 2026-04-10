@@ -47,8 +47,24 @@ The repository contains the full Nova Analytics application: a marketing landing
 - **`/login`** — custom login page with show/hide password toggle and friendly error messages
 - **`/signup`** — custom signup page collecting username, email, password, and password confirmation, with client-side and server-side validation
 - After login or signup, the user is auto-redirected to the dashboard at `/websites`
-- JWT-based auth with bcrypt password hashing
 - Default admin credentials are seeded on first build (see "Demo credentials" below)
+
+### Auth security architecture
+Layered defenses on every auth endpoint:
+
+| Layer | What it prevents | Implementation |
+| --- | --- | --- |
+| **JWT** signed with a 96-character `HASH_SALT` server-side secret | Token forgery | `src/lib/jwt.ts` + `HASH_SALT` env var |
+| **bcrypt** password hashing (10 salt rounds) | Plaintext password leaks | `src/lib/password.ts` |
+| **Per-IP sliding-window rate limit** (5/min, 30/hour) on `/api/auth/login` and `/api/auth/signup` | Credential stuffing, brute force, signup spam | `src/lib/rate-limit.ts` |
+| **Honeypot field** (invisible `company_website` input) on signup | Bot form-fill spam | `SignupPage.tsx` + signup route check |
+| **Generic error responses** on signup (`account-creation-failed` instead of `username-already-exists`) | Username enumeration | `src/app/api/auth/signup/route.ts` |
+| **`Retry-After` header** on 429 responses | RFC-compliant rate limit UX | `src/lib/rate-limit.ts` |
+| **HSTS** (`Strict-Transport-Security`) header (when `FORCE_SSL=1`) | SSL downgrade attacks | `next.config.ts` |
+| **Zod schema validation** on every input field | Type confusion, injection | Both auth route handlers |
+| **CORS** headers scoped to `/api/*` | Cross-origin abuse | `next.config.ts` |
+
+Stops short of 2FA and account lockout — those are the next layer for production-grade auth and would be added before a real launch.
 
 ### Dashboard (`/websites`)
 A complete production-grade analytics product including:
@@ -219,7 +235,8 @@ For all hosts, set the same environment variables described above. Make sure to 
 ## Tradeoffs and known limitations
 
 - **No password reset flow** — if a user forgets their password, an admin currently has to reset it manually. Production would need a "forgot password" email flow.
-- **No per-IP rate limit on auth endpoints** — production should add at least a per-IP limiter on `/api/auth/login` and `/api/auth/signup` (Upstash Redis or Vercel KV) to prevent credential-stuffing.
+- **No 2FA, no account lockout** — covered by per-IP rate limiting at the current threat level, but real production should add both.
+- **In-memory rate limiter** — per-IP limits live in process memory, so the effective threshold is "5/min per (IP, function instance)." Vercel can spin up multiple instances under load. For a globally consistent limit, swap the in-memory map for Upstash Redis or Vercel KV — `src/lib/rate-limit.ts` is structured so this is a one-function change.
 - **Single-region database** — single Supabase Postgres in `aws-1-ap-southeast-2`. A high-traffic production deployment would want read replicas + ClickHouse for the heaviest analytics aggregations.
 - **No automated tests in this build** — the existing test scaffolding is configured but not exercised. Would add E2E coverage of the signup → login → add-website → see analytics flow with more time.
 
@@ -229,7 +246,8 @@ For all hosts, set the same environment variables described above. Make sure to 
 
 - Add NextAuth + Google / GitHub OAuth as additional sign-in options
 - Implement password reset via transactional email
-- Add per-IP rate limiting on the auth endpoints
+- Add 2FA (TOTP) and account lockout after N failed login attempts
+- Swap the in-memory rate limiter for Upstash Redis / Vercel KV (globally consistent across instances)
 - Write E2E tests for the full signup → login → tracking → reporting flow
 - Add a billing tab with a pricing page (would round out the SaaS feel)
 - Build a custom email templates system for invites and password resets
