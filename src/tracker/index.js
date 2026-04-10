@@ -35,8 +35,8 @@
     hostUrl || '__COLLECT_API_HOST__' || currentScript.src.split('/').slice(0, -1).join('/');
   const endpoint = `${host.replace(/\/$/, '')}__COLLECT_API_ENDPOINT__`;
   const screen = `${width}x${height}`;
-  const eventRegex = /data-umami-event-([\w-_]+)/;
-  const eventNameAttribute = `${_data}umami-event`;
+  const eventRegex = /data-nova-event-([\w-_]+)/;
+  const eventNameAttribute = `${_data}nova-event`;
   const delayDuration = 300;
 
   /* Helper functions */
@@ -144,7 +144,7 @@
   const trackingDisabled = () =>
     disabled ||
     !website ||
-    localStorage?.getItem('umami.disabled') ||
+    localStorage?.getItem('nova.disabled') ||
     (domain && !domains.includes(hostname)) ||
     (dnt && hasDoNotTrack());
 
@@ -166,7 +166,7 @@
         body: JSON.stringify({ type, payload }),
         headers: {
           'Content-Type': 'application/json',
-          ...(typeof cache !== 'undefined' && { 'x-umami-cache': cache }),
+          ...(typeof cache !== 'undefined' && { 'x-nova-cache': cache }),
         },
         credentials,
       });
@@ -215,8 +215,8 @@
 
   /* Start */
 
-  if (!window.umami) {
-    window.umami = {
+  if (!window.nova) {
+    window.nova = {
       track,
       identify,
     };

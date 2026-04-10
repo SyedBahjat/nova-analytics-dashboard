@@ -1,13 +1,13 @@
 {
-  "name": "umami",
-  "version": "3.0.3",
-  "description": "A modern, privacy-focused alternative to Google Analytics.",
-  "author": "Umami Software, Inc. <hello@umami.is>",
+  "name": "nova-analytics-dashboard",
+  "version": "1.0.0",
+  "description": "Nova Analytics — privacy-first web analytics for modern teams.",
+  "author": "Nova Analytics <admin@novaanalytics.io>",
   "license": "MIT",
-  "homepage": "https://umami.is",
+  "homepage": "https://novaanalytics.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umami-software/umami.git"
+    "url": "https://github.com/SyedBahjat/nova-analytics-dashboard.git"
   },
   "type": "module",
   "scripts": {

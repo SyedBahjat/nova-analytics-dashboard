@@ -71,6 +71,7 @@ export async function getUsers(criteria: UserFindManyArgs, filters: QueryFilters
 export async function createUser(data: {
   id: string;
   username: string;
+  email?: string;
   password: string;
   role: Role;
 }) {
@@ -79,6 +80,7 @@ export async function createUser(data: {
     select: {
       id: true,
       username: true,
+      email: true,
       role: true,
     },
   });

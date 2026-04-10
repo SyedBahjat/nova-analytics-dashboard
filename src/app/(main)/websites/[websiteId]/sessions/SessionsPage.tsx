@@ -9,7 +9,7 @@ import { getItem, setItem } from '@/lib/storage';
 import { SessionProperties } from './SessionProperties';
 import { SessionsDataTable } from './SessionsDataTable';
 
-const KEY_NAME = 'umami.sessions.tab';
+const KEY_NAME = 'nova.sessions.tab';
 
 export function SessionsPage({ websiteId }) {
   const [tab, setTab] = useState(getItem(KEY_NAME) || 'activity');
