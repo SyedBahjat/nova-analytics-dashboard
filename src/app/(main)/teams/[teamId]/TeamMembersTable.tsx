@@ -1,6 +1,6 @@
-import { DataColumn, DataTable, Row } from '@umami/react-zen';
 import { useMessages } from '@/components/hooks';
 import { ROLES } from '@/lib/constants';
+import { DataColumn, DataTable, Row } from '@/lib/ui';
 import { TeamMemberEditButton } from './TeamMemberEditButton';
 import { TeamMemberRemoveButton } from './TeamMemberRemoveButton';
 

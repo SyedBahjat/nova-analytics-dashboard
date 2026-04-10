@@ -155,12 +155,8 @@ if (trackerScriptName) {
   }
 }
 
-if (cloudMode) {
-  rewrites.push({
-    source: '/script.js',
-    destination: 'https://cloud.umami.is/script.js',
-  });
-}
+// Cloud-mode tracker rewrite removed in the Nova Analytics build —
+// we serve the tracker locally from /script.js, no upstream redirect.
 
 /** @type {import('next').NextConfig} */
 export default {

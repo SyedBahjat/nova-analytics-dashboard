@@ -1,10 +1,10 @@
-import { Column } from '@umami/react-zen';
 import { TeamLeaveButton } from '@/app/(main)/teams/TeamLeaveButton';
 import { PageHeader } from '@/components/common/PageHeader';
 import { Panel } from '@/components/common/Panel';
 import { useLoginQuery, useNavigation, useTeam } from '@/components/hooks';
 import { Users } from '@/components/icons';
 import { ROLES } from '@/lib/constants';
+import { Column } from '@/lib/ui';
 import { TeamEditForm } from './TeamEditForm';
 import { TeamManage } from './TeamManage';
 import { TeamMembersDataTable } from './TeamMembersDataTable';

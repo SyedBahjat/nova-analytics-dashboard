@@ -1,4 +1,3 @@
-import { Column, Text } from '@umami/react-zen';
 import { SideMenu } from '@/components/common/SideMenu';
 import { useMessages, useNavigation } from '@/components/hooks';
 import {
@@ -13,6 +12,7 @@ import {
 } from '@/components/icons';
 import { WebsiteSelect } from '@/components/input/WebsiteSelect';
 import { Funnel, Lightning, Magnet, Money, Network, Path, Target } from '@/components/svg';
+import { Column, Text } from '@/lib/ui';
 
 export function WebsiteNav({
   websiteId,

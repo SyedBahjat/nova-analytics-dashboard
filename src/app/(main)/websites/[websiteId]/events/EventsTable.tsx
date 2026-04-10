@@ -1,3 +1,11 @@
+import Link from 'next/link';
+import { Avatar } from '@/components/common/Avatar';
+import { DateDistance } from '@/components/common/DateDistance';
+import { TypeIcon } from '@/components/common/TypeIcon';
+import { useFormat, useMessages, useNavigation } from '@/components/hooks';
+import { Eye, FileText } from '@/components/icons';
+import { EventData } from '@/components/metrics/EventData';
+import { Lightning } from '@/components/svg';
 import {
   Button,
   DataColumn,
@@ -10,15 +18,7 @@ import {
   Popover,
   Row,
   Text,
-} from '@umami/react-zen';
-import Link from 'next/link';
-import { Avatar } from '@/components/common/Avatar';
-import { DateDistance } from '@/components/common/DateDistance';
-import { TypeIcon } from '@/components/common/TypeIcon';
-import { useFormat, useMessages, useNavigation } from '@/components/hooks';
-import { Eye, FileText } from '@/components/icons';
-import { EventData } from '@/components/metrics/EventData';
-import { Lightning } from '@/components/svg';
+} from '@/lib/ui';
 
 export function EventsTable(props: DataTableProps) {
   const { formatMessage, labels } = useMessages();

@@ -1,5 +1,5 @@
-import { Column, Label } from '@umami/react-zen';
 import { useLoginQuery, useMessages } from '@/components/hooks';
+import { Column, Label } from '@/lib/ui';
 import { DateRangeSetting } from './DateRangeSetting';
 import { LanguageSetting } from './LanguageSetting';
 import { ThemeSetting } from './ThemeSetting';

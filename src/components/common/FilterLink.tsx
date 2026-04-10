@@ -1,8 +1,8 @@
-import { Icon, Row, Text } from '@umami/react-zen';
 import Link from 'next/link';
 import { type HTMLAttributes, type ReactNode, useState } from 'react';
 import { useMessages, useNavigation } from '@/components/hooks';
 import { ExternalLink } from '@/components/icons';
+import { Icon, Row, Text } from '@/lib/ui';
 
 export interface FilterLinkProps extends HTMLAttributes<HTMLDivElement> {
   type: string;

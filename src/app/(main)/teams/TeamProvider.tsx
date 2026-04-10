@@ -1,8 +1,8 @@
 'use client';
-import { Loading } from '@umami/react-zen';
 import { createContext, type ReactNode } from 'react';
 import { useTeamQuery } from '@/components/hooks/queries/useTeamQuery';
 import type { Team } from '@/generated/prisma/client';
+import { Loading } from '@/lib/ui';
 
 export const TeamContext = createContext<Team>(null);
 

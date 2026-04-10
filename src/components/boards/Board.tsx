@@ -1,4 +1,4 @@
-import { Column } from '@umami/react-zen';
+import { Column } from '@/lib/ui';
 
 export interface BoardProps {
   children?: React.ReactNode;

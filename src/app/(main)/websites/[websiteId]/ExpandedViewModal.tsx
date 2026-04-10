@@ -1,6 +1,6 @@
-import { Dialog, Modal } from '@umami/react-zen';
 import { WebsiteExpandedView } from '@/app/(main)/websites/[websiteId]/WebsiteExpandedView';
 import { useMobile, useNavigation } from '@/components/hooks';
+import { Dialog, Modal } from '@/lib/ui';
 
 export function ExpandedViewModal({
   websiteId,

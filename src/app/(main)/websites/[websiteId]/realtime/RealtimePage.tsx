@@ -1,5 +1,4 @@
 'use client';
-import { Grid } from '@umami/react-zen';
 import { firstBy } from 'thenby';
 import { GridRow } from '@/components/common/GridRow';
 import { PageBody } from '@/components/common/PageBody';
@@ -8,6 +7,7 @@ import { useMobile, useRealtimeQuery } from '@/components/hooks';
 import { RealtimeChart } from '@/components/metrics/RealtimeChart';
 import { WorldMap } from '@/components/metrics/WorldMap';
 import { percentFilter } from '@/lib/filters';
+import { Grid } from '@/lib/ui';
 import { RealtimeCountries } from './RealtimeCountries';
 import { RealtimeHeader } from './RealtimeHeader';
 import { RealtimeLog } from './RealtimeLog';

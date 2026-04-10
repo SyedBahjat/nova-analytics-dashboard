@@ -1,7 +1,7 @@
-import { Row } from '@umami/react-zen';
 import { PageHeader } from '@/components/common/PageHeader';
 import { useLoginQuery, useMessages } from '@/components/hooks';
 import { ROLES } from '@/lib/constants';
+import { Row } from '@/lib/ui';
 import { TeamsAddButton } from './TeamsAddButton';
 import { TeamsJoinButton } from './TeamsJoinButton';
 

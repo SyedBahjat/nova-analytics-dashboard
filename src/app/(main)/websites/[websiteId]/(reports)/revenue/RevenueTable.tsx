@@ -1,6 +1,6 @@
-import { DataColumn, DataTable } from '@umami/react-zen';
 import { useMessages } from '@/components/hooks';
 import { formatLongCurrency } from '@/lib/format';
+import { DataColumn, DataTable } from '@/lib/ui';
 
 export function RevenueTable({ data = [] }) {
   const { formatMessage, labels } = useMessages();

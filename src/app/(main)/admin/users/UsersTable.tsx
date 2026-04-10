@@ -1,4 +1,3 @@
-import { DataColumn, DataTable, Icon, MenuItem, Modal, Row, Text } from '@umami/react-zen';
 import Link from 'next/link';
 import { useState } from 'react';
 import { DateDistance } from '@/components/common/DateDistance';
@@ -6,6 +5,7 @@ import { useMessages } from '@/components/hooks';
 import { Edit, Trash } from '@/components/icons';
 import { MenuButton } from '@/components/input/MenuButton';
 import { ROLES } from '@/lib/constants';
+import { DataColumn, DataTable, Icon, MenuItem, Modal, Row, Text } from '@/lib/ui';
 import { UserDeleteForm } from './UserDeleteForm';
 
 export function UsersTable({

@@ -1,5 +1,5 @@
-import { Button, Icon, Row, useTheme } from '@umami/react-zen';
 import { Moon, Sun } from '@/components/icons';
+import { Button, Icon, Row, useTheme } from '@/lib/ui';
 
 export function ThemeSetting() {
   const { theme, setTheme } = useTheme();

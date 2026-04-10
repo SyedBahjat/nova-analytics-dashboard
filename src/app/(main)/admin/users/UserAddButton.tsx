@@ -1,6 +1,6 @@
-import { Button, Dialog, DialogTrigger, Icon, Modal, Text, useToast } from '@umami/react-zen';
 import { useMessages, useModified } from '@/components/hooks';
 import { Plus } from '@/components/icons';
+import { Button, Dialog, DialogTrigger, Icon, Modal, Text, useToast } from '@/lib/ui';
 import { UserAddForm } from './UserAddForm';
 
 export function UserAddButton({ onSave }: { onSave?: () => void }) {

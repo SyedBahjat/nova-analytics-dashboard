@@ -1,5 +1,5 @@
-import { ListItem, Select } from '@umami/react-zen';
 import { useMessages } from '@/components/hooks';
+import { ListItem, Select } from '@/lib/ui';
 
 export interface ActionSelectProps {
   value?: string;

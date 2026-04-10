@@ -1,3 +1,5 @@
+import { useLoginQuery, useMessages, useUpdateQuery, useUser } from '@/components/hooks';
+import { ROLES } from '@/lib/constants';
 import {
   Form,
   FormButtons,
@@ -7,9 +9,7 @@ import {
   PasswordField,
   Select,
   TextField,
-} from '@umami/react-zen';
-import { useLoginQuery, useMessages, useUpdateQuery, useUser } from '@/components/hooks';
-import { ROLES } from '@/lib/constants';
+} from '@/lib/ui';
 
 export function UserEditForm({ userId, onSave }: { userId: string; onSave?: () => void }) {
   const { formatMessage, labels, messages, getMessage } = useMessages();

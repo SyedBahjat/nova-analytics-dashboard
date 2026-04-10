@@ -1,7 +1,7 @@
-import { Button, Dialog, DialogTrigger, Icon, Modal, Text, useToast } from '@umami/react-zen';
 import { useMessages, useModified } from '@/components/hooks';
 import { Plus } from '@/components/icons';
 import { messages } from '@/components/messages';
+import { Button, Dialog, DialogTrigger, Icon, Modal, Text, useToast } from '@/lib/ui';
 import { TeamAddForm } from './TeamAddForm';
 
 export function TeamsAddButton({ onSave }: { onSave?: () => void }) {

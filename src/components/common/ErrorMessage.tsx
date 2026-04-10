@@ -1,6 +1,6 @@
-import { Icon, Row, Text } from '@umami/react-zen';
 import { useMessages } from '@/components/hooks';
 import { AlertTriangle } from '@/components/icons';
+import { Icon, Row, Text } from '@/lib/ui';
 
 export function ErrorMessage() {
   const { formatMessage, messages } = useMessages();

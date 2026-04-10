@@ -1,8 +1,8 @@
-import { IconLabel } from '@umami/react-zen';
 import { LinkButton } from '@/components/common/LinkButton';
 import { PageHeader } from '@/components/common/PageHeader';
 import { useMessages, usePixel, useSlug } from '@/components/hooks';
 import { ExternalLink, Grid2x2 } from '@/components/icons';
+import { IconLabel } from '@/lib/ui';
 
 export function PixelHeader() {
   const { formatMessage, labels } = useMessages();

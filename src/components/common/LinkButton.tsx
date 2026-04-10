@@ -1,7 +1,7 @@
-import { Button, type ButtonProps } from '@umami/react-zen';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { useLocale } from '@/components/hooks';
+import { Button, type ButtonProps } from '@/lib/ui';
 
 export interface LinkButtonProps extends ButtonProps {
   href: string;

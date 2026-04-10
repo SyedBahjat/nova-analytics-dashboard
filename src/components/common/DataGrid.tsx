@@ -1,5 +1,4 @@
 import type { UseQueryResult } from '@tanstack/react-query';
-import { Column, Row, SearchField } from '@umami/react-zen';
 import {
   cloneElement,
   isValidElement,
@@ -13,6 +12,7 @@ import { LoadingPanel } from '@/components/common/LoadingPanel';
 import { Pager } from '@/components/common/Pager';
 import { useMessages, useMobile, useNavigation } from '@/components/hooks';
 import type { PageResult } from '@/lib/types';
+import { Column, Row, SearchField } from '@/lib/ui';
 
 const DEFAULT_SEARCH_DELAY = 600;
 

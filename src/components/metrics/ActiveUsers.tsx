@@ -1,7 +1,7 @@
-import { StatusLight, Text } from '@umami/react-zen';
 import { useMemo } from 'react';
 import { LinkButton } from '@/components/common/LinkButton';
 import { useActyiveUsersQuery, useMessages } from '@/components/hooks';
+import { StatusLight, Text } from '@/lib/ui';
 
 export function ActiveUsers({
   websiteId,

@@ -1,4 +1,3 @@
-import { Button, Column, DataColumn, DataTable, Icon, Row, SearchField } from '@umami/react-zen';
 import { type ReactNode, useState } from 'react';
 import { LoadingPanel } from '@/components/common/LoadingPanel';
 import { useMessages, useWebsiteExpandedMetricsQuery } from '@/components/hooks';
@@ -7,6 +6,7 @@ import { DownloadButton } from '@/components/input/DownloadButton';
 import { MetricLabel } from '@/components/metrics/MetricLabel';
 import { SESSION_COLUMNS } from '@/lib/constants';
 import { formatShortTime } from '@/lib/format';
+import { Button, Column, DataColumn, DataTable, Icon, Row, SearchField } from '@/lib/ui';
 
 export interface MetricsExpandedTableProps {
   websiteId: string;

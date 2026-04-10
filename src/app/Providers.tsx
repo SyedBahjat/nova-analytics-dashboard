@@ -1,11 +1,11 @@
 'use client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { RouterProvider, ZenProvider } from '@umami/react-zen';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { IntlProvider } from 'react-intl';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { useLocale } from '@/components/hooks';
+import { RouterProvider, ZenProvider } from '@/lib/ui';
 import 'chartjs-adapter-date-fns';
 
 const client = new QueryClient({

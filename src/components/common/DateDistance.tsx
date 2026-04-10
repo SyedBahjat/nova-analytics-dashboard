@@ -1,7 +1,7 @@
-import { Text } from '@umami/react-zen';
 import { formatDistanceToNow } from 'date-fns';
 import { useLocale, useTimezone } from '@/components/hooks';
 import { isInvalidDate } from '@/lib/date';
+import { Text } from '@/lib/ui';
 
 export function DateDistance({ date }: { date: Date }) {
   const { formatTimezoneDate } = useTimezone();

@@ -1,6 +1,6 @@
-import { Button, DialogTrigger, Icon, Menu, Popover } from '@umami/react-zen';
 import type { Key, ReactNode } from 'react';
 import { Ellipsis } from '@/components/icons';
+import { Button, DialogTrigger, Icon, Menu, Popover } from '@/lib/ui';
 
 export function MenuButton({
   children,

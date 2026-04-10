@@ -1,4 +1,3 @@
-import { useTheme } from '@umami/react-zen';
 import { useMemo, useState } from 'react';
 import { Chart, type ChartProps } from '@/components/charts/Chart';
 import { ChartTooltip } from '@/components/charts/ChartTooltip';
@@ -7,6 +6,7 @@ import { renderNumberLabels } from '@/lib/charts';
 import { getThemeColors } from '@/lib/colors';
 import { DATE_FORMATS, formatDate } from '@/lib/date';
 import { formatLongCurrency, formatLongNumber } from '@/lib/format';
+import { useTheme } from '@/lib/ui';
 
 const dateFormats = {
   millisecond: 'T',

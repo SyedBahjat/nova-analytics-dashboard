@@ -1,18 +1,3 @@
-import {
-  Column,
-  Icon,
-  IconLabel,
-  Menu,
-  MenuItem,
-  MenuSection,
-  MenuSeparator,
-  MenuTrigger,
-  Popover,
-  Pressable,
-  Row,
-  SubmenuTrigger,
-  Text,
-} from '@umami/react-zen';
 import { ArrowRight } from 'lucide-react';
 import type { Key } from 'react';
 import {
@@ -36,6 +21,21 @@ import {
 import { Switch } from '@/components/svg';
 import { DOCS_URL, LAST_TEAM_CONFIG } from '@/lib/constants';
 import { removeItem } from '@/lib/storage';
+import {
+  Column,
+  Icon,
+  IconLabel,
+  Menu,
+  MenuItem,
+  MenuSection,
+  MenuSeparator,
+  MenuTrigger,
+  Popover,
+  Pressable,
+  Row,
+  SubmenuTrigger,
+  Text,
+} from '@/lib/ui';
 
 export interface TeamsButtonProps {
   showText?: boolean;

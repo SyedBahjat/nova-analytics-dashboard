@@ -1,4 +1,3 @@
-import { Grid, Heading, Row, Tab, TabList, TabPanel, Tabs } from '@umami/react-zen';
 import { GridRow } from '@/components/common/GridRow';
 import { Panel } from '@/components/common/Panel';
 import { useMessages, useNavigation } from '@/components/hooks';
@@ -6,6 +5,7 @@ import { EventsChart } from '@/components/metrics/EventsChart';
 import { MetricsTable } from '@/components/metrics/MetricsTable';
 import { WeeklyTraffic } from '@/components/metrics/WeeklyTraffic';
 import { WorldMap } from '@/components/metrics/WorldMap';
+import { Grid, Heading, Row, Tab, TabList, TabPanel, Tabs } from '@/lib/ui';
 
 export function WebsitePanels({ websiteId }: { websiteId: string }) {
   const { formatMessage, labels } = useMessages();

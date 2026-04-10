@@ -1,8 +1,8 @@
-import { IconLabel, Row } from '@umami/react-zen';
 import Link from 'next/link';
 import { PageHeader } from '@/components/common/PageHeader';
 import { useMessages, useNavigation, useWebsite } from '@/components/hooks';
 import { ArrowLeft, Globe } from '@/components/icons';
+import { IconLabel, Row } from '@/lib/ui';
 
 export function WebsiteSettingsHeader() {
   const website = useWebsite();

@@ -1,8 +1,8 @@
-import { DataColumn, DataTable, type DataTableProps, Row } from '@umami/react-zen';
 import Link from 'next/link';
 import { DateDistance } from '@/components/common/DateDistance';
 import { ExternalLink } from '@/components/common/ExternalLink';
 import { useMessages, useNavigation, useSlug } from '@/components/hooks';
+import { DataColumn, DataTable, type DataTableProps, Row } from '@/lib/ui';
 import { PixelDeleteButton } from './PixelDeleteButton';
 import { PixelEditButton } from './PixelEditButton';
 

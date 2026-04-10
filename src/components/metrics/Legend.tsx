@@ -1,6 +1,6 @@
-import { Row, StatusLight, Text } from '@umami/react-zen';
 import type { LegendItem } from 'chart.js/auto';
 import { colord } from 'colord';
+import { Row, StatusLight, Text } from '@/lib/ui';
 
 export function Legend({
   items = [],

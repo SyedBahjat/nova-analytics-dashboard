@@ -1,7 +1,7 @@
-import { Column, DataColumn, DataTable, Text } from '@umami/react-zen';
 import { LoadingPanel } from '@/components/common/LoadingPanel';
 import { useFields, useFormat, useMessages, useResultQuery } from '@/components/hooks';
 import { formatShortTime } from '@/lib/format';
+import { Column, DataColumn, DataTable, Text } from '@/lib/ui';
 
 export interface BreakdownProps {
   websiteId: string;

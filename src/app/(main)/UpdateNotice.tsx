@@ -1,9 +1,9 @@
-import { AlertBanner, Button, Column, Row } from '@umami/react-zen';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import { useMessages } from '@/components/hooks';
 import { REPO_URL, VERSION_CHECK } from '@/lib/constants';
 import { setItem } from '@/lib/storage';
+import { AlertBanner, Button, Column, Row } from '@/lib/ui';
 import { checkVersion, useVersion } from '@/store/version';
 
 export function UpdateNotice({ user, config }) {

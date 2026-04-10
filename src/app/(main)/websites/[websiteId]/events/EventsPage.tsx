@@ -1,5 +1,4 @@
 'use client';
-import { Column, Tab, TabList, TabPanel, Tabs } from '@umami/react-zen';
 import { type Key, useState } from 'react';
 import { SessionModal } from '@/app/(main)/websites/[websiteId]/sessions/SessionModal';
 import { WebsiteControls } from '@/app/(main)/websites/[websiteId]/WebsiteControls';
@@ -8,6 +7,7 @@ import { useMessages } from '@/components/hooks';
 import { EventsChart } from '@/components/metrics/EventsChart';
 import { MetricsTable } from '@/components/metrics/MetricsTable';
 import { getItem, setItem } from '@/lib/storage';
+import { Column, Tab, TabList, TabPanel, Tabs } from '@/lib/ui';
 import { EventProperties } from './EventProperties';
 import { EventsDataTable } from './EventsDataTable';
 

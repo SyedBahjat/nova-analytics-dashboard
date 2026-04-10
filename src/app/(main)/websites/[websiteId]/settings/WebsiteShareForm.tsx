@@ -1,3 +1,7 @@
+import { RefreshCcw } from 'lucide-react';
+import { useState } from 'react';
+import { useConfig, useMessages, useUpdateQuery } from '@/components/hooks';
+import { getRandomChars } from '@/lib/generate';
 import {
   Button,
   Column,
@@ -9,11 +13,7 @@ import {
   Row,
   Switch,
   TextField,
-} from '@umami/react-zen';
-import { RefreshCcw } from 'lucide-react';
-import { useState } from 'react';
-import { useConfig, useMessages, useUpdateQuery } from '@/components/hooks';
-import { getRandomChars } from '@/lib/generate';
+} from '@/lib/ui';
 
 const generateId = () => getRandomChars(16);
 

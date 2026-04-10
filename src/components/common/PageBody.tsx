@@ -1,7 +1,7 @@
 'use client';
-import { AlertBanner, Column, type ColumnProps, Loading } from '@umami/react-zen';
 import type { ReactNode } from 'react';
 import { useMessages } from '@/components/hooks';
+import { AlertBanner, Column, type ColumnProps, Loading } from '@/lib/ui';
 
 const DEFAULT_WIDTH = '1320px';
 

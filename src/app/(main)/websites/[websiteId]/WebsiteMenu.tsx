@@ -1,16 +1,7 @@
-import {
-  Button,
-  Icon,
-  Menu,
-  MenuItem,
-  MenuSeparator,
-  MenuTrigger,
-  Popover,
-  Text,
-} from '@umami/react-zen';
 import { Fragment } from 'react';
 import { useMessages, useNavigation } from '@/components/hooks';
 import { Edit, More, Share } from '@/components/icons';
+import { Button, Icon, Menu, MenuItem, MenuSeparator, MenuTrigger, Popover, Text } from '@/lib/ui';
 
 export function WebsiteMenu({ websiteId }: { websiteId: string }) {
   const { formatMessage, labels } = useMessages();

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   Column,
   Heading,
@@ -7,8 +8,7 @@ import {
   NavMenuItem,
   type NavMenuProps,
   Row,
-} from '@umami/react-zen';
-import Link from 'next/link';
+} from '@/lib/ui';
 
 interface SideMenuData {
   id: string;

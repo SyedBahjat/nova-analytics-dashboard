@@ -1,12 +1,3 @@
-import {
-  Row,
-  Sidebar,
-  SidebarHeader,
-  SidebarItem,
-  type SidebarProps,
-  SidebarSection,
-  ThemeButton,
-} from '@umami/react-zen';
 import Link from 'next/link';
 import type { Key } from 'react';
 import { useGlobalState, useMessages, useNavigation } from '@/components/hooks';
@@ -15,6 +6,15 @@ import { LanguageButton } from '@/components/input/LanguageButton';
 import { NavButton } from '@/components/input/NavButton';
 import { PanelButton } from '@/components/input/PanelButton';
 import { Logo } from '@/components/svg';
+import {
+  Row,
+  Sidebar,
+  SidebarHeader,
+  SidebarItem,
+  type SidebarProps,
+  SidebarSection,
+  ThemeButton,
+} from '@/lib/ui';
 
 export function SideNav(props: SidebarProps) {
   const { formatMessage, labels } = useMessages();

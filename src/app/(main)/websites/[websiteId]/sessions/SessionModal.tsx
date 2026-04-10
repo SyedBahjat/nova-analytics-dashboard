@@ -1,6 +1,6 @@
-import { Column, Dialog, Modal, type ModalProps } from '@umami/react-zen';
 import { SessionProfile } from '@/app/(main)/websites/[websiteId]/sessions/SessionProfile';
 import { useNavigation } from '@/components/hooks';
+import { Column, Dialog, Modal, type ModalProps } from '@/lib/ui';
 
 export interface SessionModalProps extends ModalProps {
   websiteId: string;

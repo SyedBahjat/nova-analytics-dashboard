@@ -1,6 +1,6 @@
-import { Icon, Row, type RowProps, Text } from '@umami/react-zen';
 import type { ReactNode } from 'react';
 import { ArrowRight } from '@/components/icons';
+import { Icon, Row, type RowProps, Text } from '@/lib/ui';
 
 const STYLES = {
   positive: {

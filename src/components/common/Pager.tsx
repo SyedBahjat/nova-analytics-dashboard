@@ -1,6 +1,6 @@
-import { Button, Icon, Row, Text } from '@umami/react-zen';
 import { useMessages } from '@/components/hooks';
 import { ChevronRight } from '@/components/icons';
+import { Button, Icon, Row, Text } from '@/lib/ui';
 
 export interface PagerProps {
   page: string | number;

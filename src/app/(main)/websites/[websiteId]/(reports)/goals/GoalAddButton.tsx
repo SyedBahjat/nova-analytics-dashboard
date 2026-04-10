@@ -1,6 +1,6 @@
-import { Button, Dialog, DialogTrigger, Icon, Modal, Text } from '@umami/react-zen';
 import { useMessages } from '@/components/hooks';
 import { Plus } from '@/components/icons';
+import { Button, Dialog, DialogTrigger, Icon, Modal, Text } from '@/lib/ui';
 import { GoalEditForm } from './GoalEditForm';
 
 export function GoalAddButton({ websiteId }: { websiteId: string }) {

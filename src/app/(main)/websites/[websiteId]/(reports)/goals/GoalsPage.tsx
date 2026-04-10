@@ -1,10 +1,10 @@
 'use client';
-import { Column, Grid } from '@umami/react-zen';
 import { WebsiteControls } from '@/app/(main)/websites/[websiteId]/WebsiteControls';
 import { LoadingPanel } from '@/components/common/LoadingPanel';
 import { Panel } from '@/components/common/Panel';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { useDateRange, useReportsQuery } from '@/components/hooks';
+import { Column, Grid } from '@/lib/ui';
 import { Goal } from './Goal';
 import { GoalAddButton } from './GoalAddButton';
 

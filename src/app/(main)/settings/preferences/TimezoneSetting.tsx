@@ -1,7 +1,7 @@
-import { Button, ListItem, Row, Select } from '@umami/react-zen';
 import { useState } from 'react';
 import { useMessages, useTimezone } from '@/components/hooks';
 import { getTimezone } from '@/lib/date';
+import { Button, ListItem, Row, Select } from '@/lib/ui';
 
 const timezones = Intl.supportedValuesOf('timeZone');
 

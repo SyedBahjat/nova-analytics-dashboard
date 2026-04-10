@@ -1,6 +1,6 @@
-import { Icon, LoadingButton, Text } from '@umami/react-zen';
 import { useDeleteQuery, useMessages } from '@/components/hooks';
 import { X } from '@/components/icons';
+import { Icon, LoadingButton, Text } from '@/lib/ui';
 
 export function TeamWebsiteRemoveButton({ teamId, websiteId, onSave }) {
   const { formatMessage, labels } = useMessages();

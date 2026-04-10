@@ -1,3 +1,5 @@
+import { useMessages, useUpdateQuery } from '@/components/hooks';
+import { ROLES } from '@/lib/constants';
 import {
   Button,
   Form,
@@ -8,9 +10,7 @@ import {
   PasswordField,
   Select,
   TextField,
-} from '@umami/react-zen';
-import { useMessages, useUpdateQuery } from '@/components/hooks';
-import { ROLES } from '@/lib/constants';
+} from '@/lib/ui';
 
 export function UserAddForm({ onSave, onClose }) {
   const { mutateAsync, error, isPending } = useUpdateQuery(`/users`);

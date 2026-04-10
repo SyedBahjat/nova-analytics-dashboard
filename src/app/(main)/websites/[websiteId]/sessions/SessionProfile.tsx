@@ -1,18 +1,8 @@
-import {
-  Button,
-  Column,
-  Icon,
-  Row,
-  Tab,
-  TabList,
-  TabPanel,
-  Tabs,
-  TextField,
-} from '@umami/react-zen';
 import { X } from 'lucide-react';
 import { Avatar } from '@/components/common/Avatar';
 import { LoadingPanel } from '@/components/common/LoadingPanel';
 import { useMessages, useWebsiteSessionQuery } from '@/components/hooks';
+import { Button, Column, Icon, Row, Tab, TabList, TabPanel, Tabs, TextField } from '@/lib/ui';
 import { SessionActivity } from './SessionActivity';
 import { SessionData } from './SessionData';
 import { SessionInfo } from './SessionInfo';

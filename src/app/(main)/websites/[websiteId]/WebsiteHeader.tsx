@@ -1,4 +1,3 @@
-import { Icon, Row, Text } from '@umami/react-zen';
 import { WebsiteShareForm } from '@/app/(main)/websites/[websiteId]/settings/WebsiteShareForm';
 import { Favicon } from '@/components/common/Favicon';
 import { LinkButton } from '@/components/common/LinkButton';
@@ -7,6 +6,7 @@ import { useMessages, useNavigation, useWebsite } from '@/components/hooks';
 import { Edit, Share } from '@/components/icons';
 import { DialogButton } from '@/components/input/DialogButton';
 import { ActiveUsers } from '@/components/metrics/ActiveUsers';
+import { Icon, Row, Text } from '@/lib/ui';
 
 export function WebsiteHeader({ showActions }: { showActions?: boolean }) {
   const website = useWebsite();

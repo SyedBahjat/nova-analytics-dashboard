@@ -1,4 +1,3 @@
-import { Column, Grid, ListItem, Select } from '@umami/react-zen';
 import { useMemo, useState } from 'react';
 import { PieChart } from '@/components/charts/PieChart';
 import { LoadingPanel } from '@/components/common/LoadingPanel';
@@ -9,6 +8,7 @@ import {
 } from '@/components/hooks';
 import { ListTable } from '@/components/metrics/ListTable';
 import { CHART_COLORS } from '@/lib/constants';
+import { Column, Grid, ListItem, Select } from '@/lib/ui';
 
 export function EventProperties({ websiteId }: { websiteId: string }) {
   const [propertyName, setPropertyName] = useState('');

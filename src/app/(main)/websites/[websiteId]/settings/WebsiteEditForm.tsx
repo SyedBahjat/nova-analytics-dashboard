@@ -1,6 +1,6 @@
-import { Form, FormButtons, FormField, FormSubmitButton, TextField } from '@umami/react-zen';
 import { useMessages, useUpdateQuery, useWebsite } from '@/components/hooks';
 import { DOMAIN_REGEX } from '@/lib/constants';
+import { Form, FormButtons, FormField, FormSubmitButton, TextField } from '@/lib/ui';
 
 export function WebsiteEditForm({ websiteId, onSave }: { websiteId: string; onSave?: () => void }) {
   const website = useWebsite();

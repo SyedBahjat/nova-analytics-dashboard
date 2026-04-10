@@ -1,12 +1,5 @@
-import {
-  Button,
-  Form,
-  FormButtons,
-  FormField,
-  FormSubmitButton,
-  PasswordField,
-} from '@umami/react-zen';
 import { useMessages, useUpdateQuery } from '@/components/hooks';
+import { Button, Form, FormButtons, FormField, FormSubmitButton, PasswordField } from '@/lib/ui';
 
 export function PasswordEditForm({ onSave, onClose }) {
   const { formatMessage, labels, messages, getErrorMessage } = useMessages();

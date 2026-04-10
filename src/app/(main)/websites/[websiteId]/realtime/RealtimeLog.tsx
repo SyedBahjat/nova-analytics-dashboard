@@ -1,4 +1,3 @@
-import { Column, Heading, IconLabel, Row, SearchField, Text } from '@umami/react-zen';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { FixedSizeList } from 'react-window';
@@ -19,6 +18,7 @@ import { Eye, User } from '@/components/icons';
 import { FilterButtons } from '@/components/input/FilterButtons';
 import { Lightning } from '@/components/svg';
 import { BROWSERS, OS_NAMES } from '@/lib/constants';
+import { Column, Heading, IconLabel, Row, SearchField, Text } from '@/lib/ui';
 
 const TYPE_ALL = 'all';
 const TYPE_PAGEVIEW = 'pageview';

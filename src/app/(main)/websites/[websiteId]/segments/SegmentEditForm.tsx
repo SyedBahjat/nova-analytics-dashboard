@@ -1,3 +1,6 @@
+import { useMessages, useUpdateQuery, useWebsiteSegmentQuery } from '@/components/hooks';
+import { FieldFilters } from '@/components/input/FieldFilters';
+import { messages } from '@/components/messages';
 import {
   Button,
   Form,
@@ -7,10 +10,7 @@ import {
   Label,
   Loading,
   TextField,
-} from '@umami/react-zen';
-import { useMessages, useUpdateQuery, useWebsiteSegmentQuery } from '@/components/hooks';
-import { FieldFilters } from '@/components/input/FieldFilters';
-import { messages } from '@/components/messages';
+} from '@/lib/ui';
 
 export function SegmentEditForm({
   segmentId,

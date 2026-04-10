@@ -1,6 +1,6 @@
 'use client';
-import { Flexbox } from '@umami/react-zen';
 import { useMessages } from '@/components/hooks';
+import { Flexbox } from '@/lib/ui';
 
 export default function () {
   const { formatMessage, labels } = useMessages();

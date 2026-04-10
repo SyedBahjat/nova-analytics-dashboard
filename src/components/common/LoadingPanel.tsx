@@ -1,7 +1,7 @@
-import { Column, type ColumnProps, Loading } from '@umami/react-zen';
 import type { ReactNode } from 'react';
 import { Empty } from '@/components/common/Empty';
 import { ErrorMessage } from '@/components/common/ErrorMessage';
+import { Column, type ColumnProps, Loading } from '@/lib/ui';
 
 export interface LoadingPanelProps extends ColumnProps {
   data?: any;

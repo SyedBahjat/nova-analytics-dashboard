@@ -1,8 +1,8 @@
-import { Icon, Row, Text } from '@umami/react-zen';
 import { differenceInDays, isSameDay } from 'date-fns';
 import { useLocale } from '@/components/hooks';
 import { Calendar } from '@/components/icons';
 import { formatDate } from '@/lib/date';
+import { Icon, Row, Text } from '@/lib/ui';
 
 export function DateDisplay({ startDate, endDate }) {
   const { locale } = useLocale();

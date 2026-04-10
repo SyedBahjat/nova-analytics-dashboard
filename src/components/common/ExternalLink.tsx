@@ -1,7 +1,7 @@
-import { Icon, Row, Text } from '@umami/react-zen';
 import Link, { type LinkProps } from 'next/link';
 import type { ReactNode } from 'react';
 import { ExternalLink as LinkIcon } from '@/components/icons';
+import { Icon, Row, Text } from '@/lib/ui';
 
 export function ExternalLink({
   href,

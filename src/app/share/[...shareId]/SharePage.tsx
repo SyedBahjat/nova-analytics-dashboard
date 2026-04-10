@@ -1,11 +1,11 @@
 'use client';
-import { Column, useTheme } from '@umami/react-zen';
 import { useEffect } from 'react';
 import { WebsiteHeader } from '@/app/(main)/websites/[websiteId]/WebsiteHeader';
 import { WebsitePage } from '@/app/(main)/websites/[websiteId]/WebsitePage';
 import { WebsiteProvider } from '@/app/(main)/websites/WebsiteProvider';
 import { PageBody } from '@/components/common/PageBody';
 import { useShareTokenQuery } from '@/components/hooks';
+import { Column, useTheme } from '@/lib/ui';
 import { Footer } from './Footer';
 import { Header } from './Header';
 

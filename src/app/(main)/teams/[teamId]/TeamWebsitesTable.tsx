@@ -1,9 +1,9 @@
-import { DataColumn, DataTable, Row } from '@umami/react-zen';
 import Link from 'next/link';
 import { TeamMemberEditButton } from '@/app/(main)/teams/[teamId]/TeamMemberEditButton';
 import { TeamMemberRemoveButton } from '@/app/(main)/teams/[teamId]/TeamMemberRemoveButton';
 import { useMessages } from '@/components/hooks';
 import { ROLES } from '@/lib/constants';
+import { DataColumn, DataTable, Row } from '@/lib/ui';
 
 export function TeamWebsitesTable({
   teamId,

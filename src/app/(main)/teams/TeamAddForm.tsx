@@ -1,12 +1,5 @@
-import {
-  Button,
-  Form,
-  FormButtons,
-  FormField,
-  FormSubmitButton,
-  TextField,
-} from '@umami/react-zen';
 import { useMessages, useUpdateQuery } from '@/components/hooks';
+import { Button, Form, FormButtons, FormField, FormSubmitButton, TextField } from '@/lib/ui';
 
 export function TeamAddForm({ onSave, onClose }: { onSave: () => void; onClose: () => void }) {
   const { formatMessage, labels, getErrorMessage } = useMessages();

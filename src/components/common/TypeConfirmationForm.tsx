@@ -1,12 +1,5 @@
-import {
-  Button,
-  Form,
-  FormButtons,
-  FormField,
-  FormSubmitButton,
-  TextField,
-} from '@umami/react-zen';
 import { useMessages } from '@/components/hooks';
+import { Button, Form, FormButtons, FormField, FormSubmitButton, TextField } from '@/lib/ui';
 
 export function TypeConfirmationForm({
   confirmationValue,

@@ -10,7 +10,7 @@ import { EyeIcon, EyeOffIcon } from '../auth-icons';
 
 /**
  * Nova Analytics — Signup page
- * Custom design (no @umami/react-zen). Editorial-brutalist, mobile-responsive.
+ * Custom design (custom-styled). Editorial-brutalist, mobile-responsive.
  * Collects username + email + password + confirm. POSTs to /api/auth/signup,
  * which auto-logs the new user in and returns a JWT.
  */

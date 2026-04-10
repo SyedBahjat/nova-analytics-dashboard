@@ -1,5 +1,5 @@
-import { Row, Text } from '@umami/react-zen';
 import { CURRENT_VERSION, HOMEPAGE_URL } from '@/lib/constants';
+import { Row, Text } from '@/lib/ui';
 
 export function Footer() {
   return (

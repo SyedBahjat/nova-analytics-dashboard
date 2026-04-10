@@ -1,7 +1,7 @@
-import { Button, Dialog, DialogTrigger, Icon, Modal, Text } from '@umami/react-zen';
 import { useRouter } from 'next/navigation';
 import { useLoginQuery, useMessages, useModified } from '@/components/hooks';
 import { LogOut } from '@/components/icons';
+import { Button, Dialog, DialogTrigger, Icon, Modal, Text } from '@/lib/ui';
 import { TeamLeaveForm } from './TeamLeaveForm';
 
 export function TeamLeaveButton({ teamId, teamName }: { teamId: string; teamName: string }) {

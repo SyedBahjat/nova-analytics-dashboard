@@ -1,10 +1,10 @@
-import { useTheme } from '@umami/react-zen';
 import { useCallback, useMemo } from 'react';
 import { BarChart, type BarChartProps } from '@/components/charts/BarChart';
 import { useLocale, useMessages } from '@/components/hooks';
 import { renderDateLabels } from '@/lib/charts';
 import { getThemeColors } from '@/lib/colors';
 import { generateTimeSeries } from '@/lib/date';
+import { useTheme } from '@/lib/ui';
 
 export interface PageviewsChartProps extends BarChartProps {
   data: {

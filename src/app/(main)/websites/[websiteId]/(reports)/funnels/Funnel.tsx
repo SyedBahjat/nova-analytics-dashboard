@@ -1,4 +1,3 @@
-import { Box, Column, Dialog, Grid, Icon, ProgressBar, Row, Text } from '@umami/react-zen';
 import { LoadingPanel } from '@/components/common/LoadingPanel';
 import { useMessages, useResultQuery } from '@/components/hooks';
 import { File, User } from '@/components/icons';
@@ -6,6 +5,7 @@ import { ReportEditButton } from '@/components/input/ReportEditButton';
 import { ChangeLabel } from '@/components/metrics/ChangeLabel';
 import { Lightning } from '@/components/svg';
 import { formatLongNumber } from '@/lib/format';
+import { Box, Column, Dialog, Grid, Icon, ProgressBar, Row, Text } from '@/lib/ui';
 import { FunnelEditForm } from './FunnelEditForm';
 
 type FunnelResult = {

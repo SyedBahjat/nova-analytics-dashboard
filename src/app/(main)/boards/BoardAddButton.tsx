@@ -1,6 +1,6 @@
-import { Button, Dialog, DialogTrigger, Icon, Modal, Text, useToast } from '@umami/react-zen';
 import { useMessages, useModified, useNavigation } from '@/components/hooks';
 import { Plus } from '@/components/icons';
+import { Button, Dialog, DialogTrigger, Icon, Modal, Text, useToast } from '@/lib/ui';
 import { BoardAddForm } from './BoardAddForm';
 
 export function BoardAddButton() {

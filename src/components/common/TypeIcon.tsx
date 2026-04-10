@@ -1,5 +1,5 @@
-import { Row } from '@umami/react-zen';
 import type { ReactNode } from 'react';
+import { Row } from '@/lib/ui';
 
 export function TypeIcon({
   type,

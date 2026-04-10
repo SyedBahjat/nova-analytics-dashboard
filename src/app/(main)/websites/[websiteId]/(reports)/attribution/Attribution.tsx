@@ -1,4 +1,3 @@
-import { Column, Grid } from '@umami/react-zen';
 import { LoadingPanel } from '@/components/common/LoadingPanel';
 import { Panel } from '@/components/common/Panel';
 import { SectionHeader } from '@/components/common/SectionHeader';
@@ -8,6 +7,7 @@ import { MetricCard } from '@/components/metrics/MetricCard';
 import { MetricsBar } from '@/components/metrics/MetricsBar';
 import { percentFilter } from '@/lib/filters';
 import { formatLongNumber } from '@/lib/format';
+import { Column, Grid } from '@/lib/ui';
 
 export interface AttributionProps {
   websiteId: string;

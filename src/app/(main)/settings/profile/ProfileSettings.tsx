@@ -1,6 +1,6 @@
-import { Column, Label, Row } from '@umami/react-zen';
 import { useConfig, useLoginQuery, useMessages } from '@/components/hooks';
 import { ROLES } from '@/lib/constants';
+import { Column, Label, Row } from '@/lib/ui';
 import { PasswordChangeButton } from './PasswordChangeButton';
 
 export function ProfileSettings() {

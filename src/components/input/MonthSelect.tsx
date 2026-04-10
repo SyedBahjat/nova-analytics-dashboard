@@ -1,6 +1,6 @@
-import { ListItem, Row, Select } from '@umami/react-zen';
 import { useLocale } from '@/components/hooks';
 import { formatDate } from '@/lib/date';
+import { ListItem, Row, Select } from '@/lib/ui';
 
 export function MonthSelect({ date = new Date(), onChange }) {
   const { locale } = useLocale();

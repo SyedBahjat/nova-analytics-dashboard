@@ -1,3 +1,7 @@
+import { useMessages, useReportQuery, useUpdateQuery } from '@/components/hooks';
+import { Plus, X } from '@/components/icons';
+import { ActionSelect } from '@/components/input/ActionSelect';
+import { LookupField } from '@/components/input/LookupField';
 import {
   Button,
   Column,
@@ -12,11 +16,7 @@ import {
   Row,
   Text,
   TextField,
-} from '@umami/react-zen';
-import { useMessages, useReportQuery, useUpdateQuery } from '@/components/hooks';
-import { Plus, X } from '@/components/icons';
-import { ActionSelect } from '@/components/input/ActionSelect';
-import { LookupField } from '@/components/input/LookupField';
+} from '@/lib/ui';
 
 const FUNNEL_STEPS_MAX = 8;
 

@@ -1,4 +1,3 @@
-import { Button, Column, Dialog, DialogTrigger, Modal } from '@umami/react-zen';
 import { ActionForm } from '@/components/common/ActionForm';
 import {
   useLoginQuery,
@@ -8,6 +7,7 @@ import {
   useUserTeamsQuery,
 } from '@/components/hooks';
 import { ROLES } from '@/lib/constants';
+import { Button, Column, Dialog, DialogTrigger, Modal } from '@/lib/ui';
 import { WebsiteDeleteForm } from './WebsiteDeleteForm';
 import { WebsiteResetForm } from './WebsiteResetForm';
 import { WebsiteTransferForm } from './WebsiteTransferForm';

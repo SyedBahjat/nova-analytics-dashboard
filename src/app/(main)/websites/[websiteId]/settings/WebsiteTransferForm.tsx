@@ -1,3 +1,12 @@
+import { type Key, useState } from 'react';
+import {
+  useLoginQuery,
+  useMessages,
+  useUpdateQuery,
+  useUserTeamsQuery,
+  useWebsite,
+} from '@/components/hooks';
+import { ROLES } from '@/lib/constants';
 import {
   Button,
   Form,
@@ -8,16 +17,7 @@ import {
   Loading,
   Select,
   Text,
-} from '@umami/react-zen';
-import { type Key, useState } from 'react';
-import {
-  useLoginQuery,
-  useMessages,
-  useUpdateQuery,
-  useUserTeamsQuery,
-  useWebsite,
-} from '@/components/hooks';
-import { ROLES } from '@/lib/constants';
+} from '@/lib/ui';
 
 export function WebsiteTransferForm({
   websiteId,

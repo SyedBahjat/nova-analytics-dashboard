@@ -1,4 +1,3 @@
-import { Row } from '@umami/react-zen';
 import { Favicon } from '@/components/common/Favicon';
 import { FilterLink } from '@/components/common/FilterLink';
 import { TypeIcon } from '@/components/common/TypeIcon';
@@ -10,6 +9,7 @@ import {
   useRegionNames,
 } from '@/components/hooks';
 import { GROUPED_DOMAINS } from '@/lib/constants';
+import { Row } from '@/lib/ui';
 
 export interface MetricLabelProps {
   type: string;

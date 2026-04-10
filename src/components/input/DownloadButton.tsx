@@ -1,7 +1,7 @@
-import { Button, Icon, Tooltip, TooltipTrigger } from '@umami/react-zen';
 import Papa from 'papaparse';
 import { useMessages } from '@/components/hooks';
 import { Download } from '@/components/icons';
+import { Button, Icon, Tooltip, TooltipTrigger } from '@/lib/ui';
 
 export function DownloadButton({
   filename = 'data',

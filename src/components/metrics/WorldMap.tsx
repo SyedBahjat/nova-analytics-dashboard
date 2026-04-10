@@ -1,4 +1,3 @@
-import { Column, type ColumnProps, FloatingTooltip, useTheme } from '@umami/react-zen';
 import { colord } from 'colord';
 import { useMemo, useState } from 'react';
 import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simple-maps';
@@ -12,6 +11,7 @@ import { getThemeColors } from '@/lib/colors';
 import { ISO_COUNTRIES, MAP_FILE } from '@/lib/constants';
 import { percentFilter } from '@/lib/filters';
 import { formatLongNumber } from '@/lib/format';
+import { Column, type ColumnProps, FloatingTooltip, useTheme } from '@/lib/ui';
 
 export interface WorldMapProps extends ColumnProps {
   websiteId?: string;

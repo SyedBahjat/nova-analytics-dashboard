@@ -1,5 +1,5 @@
-import { Column, Tab, TabList, TabPanel, Tabs } from '@umami/react-zen';
 import { useMessages } from '@/components/hooks';
+import { Column, Tab, TabList, TabPanel, Tabs } from '@/lib/ui';
 import { UserEditForm } from './UserEditForm';
 import { UserWebsites } from './UserWebsites';
 

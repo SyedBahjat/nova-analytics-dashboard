@@ -1,5 +1,4 @@
 'use client';
-import { Column, Grid, Loading, Row } from '@umami/react-zen';
 import Script from 'next/script';
 import { useEffect } from 'react';
 import { MobileNav } from '@/app/(main)/MobileNav';
@@ -7,6 +6,7 @@ import { SideNav } from '@/app/(main)/SideNav';
 import { useConfig, useLoginQuery, useNavigation } from '@/components/hooks';
 import { LAST_TEAM_CONFIG } from '@/lib/constants';
 import { removeItem, setItem } from '@/lib/storage';
+import { Column, Grid, Loading, Row } from '@/lib/ui';
 import { UpdateNotice } from './UpdateNotice';
 
 export function App({ children }) {

@@ -1,7 +1,7 @@
 'use client';
-import { Column, Grid } from '@umami/react-zen';
 import type { ReactNode } from 'react';
 import { PageBody } from '@/components/common/PageBody';
+import { Column, Grid } from '@/lib/ui';
 import { SettingsNav } from './SettingsNav';
 
 export function SettingsLayout({ children }: { children: ReactNode }) {

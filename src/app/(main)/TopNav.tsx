@@ -1,6 +1,6 @@
-import { Row, ThemeButton } from '@umami/react-zen';
 import { LanguageButton } from '@/components/input/LanguageButton';
 import { ProfileButton } from '@/components/input/ProfileButton';
+import { Row, ThemeButton } from '@/lib/ui';
 
 export function TopNav() {
   return (

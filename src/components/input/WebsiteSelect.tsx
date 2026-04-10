@@ -1,4 +1,3 @@
-import { ListItem, Row, Select, type SelectProps, Text } from '@umami/react-zen';
 import { useState } from 'react';
 import { Empty } from '@/components/common/Empty';
 import {
@@ -7,6 +6,7 @@ import {
   useUserWebsitesQuery,
   useWebsiteQuery,
 } from '@/components/hooks';
+import { ListItem, Row, Select, type SelectProps, Text } from '@/lib/ui';
 
 export function WebsiteSelect({
   websiteId,

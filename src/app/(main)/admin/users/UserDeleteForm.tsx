@@ -1,5 +1,5 @@
-import { AlertDialog, Row } from '@umami/react-zen';
 import { useDeleteQuery, useMessages, useModified } from '@/components/hooks';
+import { AlertDialog, Row } from '@/lib/ui';
 
 export function UserDeleteForm({
   userId,

@@ -10,7 +10,7 @@ import { EyeIcon, EyeOffIcon } from '../auth-icons';
 
 /**
  * Nova Analytics — Login page
- * Custom design (no @umami/react-zen). Editorial-brutalist, mobile-responsive,
+ * Custom design (custom-styled). Editorial-brutalist, mobile-responsive,
  * matches the landing page aesthetic.
  */
 export function LoginPage() {

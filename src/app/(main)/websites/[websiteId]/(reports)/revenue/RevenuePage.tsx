@@ -1,7 +1,7 @@
 'use client';
-import { Column } from '@umami/react-zen';
 import { WebsiteControls } from '@/app/(main)/websites/[websiteId]/WebsiteControls';
 import { useDateRange } from '@/components/hooks';
+import { Column } from '@/lib/ui';
 import { Revenue } from './Revenue';
 
 export function RevenuePage({ websiteId }: { websiteId: string }) {

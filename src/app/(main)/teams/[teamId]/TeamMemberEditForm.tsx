@@ -1,14 +1,6 @@
-import {
-  Button,
-  Form,
-  FormButtons,
-  FormField,
-  FormSubmitButton,
-  ListItem,
-  Select,
-} from '@umami/react-zen';
 import { useMessages, useUpdateQuery } from '@/components/hooks';
 import { ROLES } from '@/lib/constants';
+import { Button, Form, FormButtons, FormField, FormSubmitButton, ListItem, Select } from '@/lib/ui';
 
 export function TeamMemberEditForm({
   teamId,

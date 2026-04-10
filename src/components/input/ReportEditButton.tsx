@@ -1,3 +1,7 @@
+import { type ReactNode, useState } from 'react';
+import { useMessages } from '@/components/hooks';
+import { useDeleteQuery } from '@/components/hooks/queries/useDeleteQuery';
+import { Edit, MoreHorizontal, Trash } from '@/components/icons';
 import {
   AlertDialog,
   Button,
@@ -9,11 +13,7 @@ import {
   Popover,
   Row,
   Text,
-} from '@umami/react-zen';
-import { type ReactNode, useState } from 'react';
-import { useMessages } from '@/components/hooks';
-import { useDeleteQuery } from '@/components/hooks/queries/useDeleteQuery';
-import { Edit, MoreHorizontal, Trash } from '@/components/icons';
+} from '@/lib/ui';
 
 export function ReportEditButton({
   id,

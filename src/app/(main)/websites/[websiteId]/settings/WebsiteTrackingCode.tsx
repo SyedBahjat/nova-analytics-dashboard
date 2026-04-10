@@ -1,5 +1,5 @@
-import { Column, Label, Text, TextField } from '@umami/react-zen';
 import { useConfig, useMessages } from '@/components/hooks';
+import { Column, Label, Text, TextField } from '@/lib/ui';
 
 const SCRIPT_NAME = 'script.js';
 

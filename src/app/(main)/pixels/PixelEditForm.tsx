@@ -1,3 +1,9 @@
+import { useEffect, useState } from 'react';
+import { useConfig, useMessages, usePixelQuery } from '@/components/hooks';
+import { useUpdateQuery } from '@/components/hooks/queries/useUpdateQuery';
+import { RefreshCw } from '@/components/icons';
+import { PIXELS_URL } from '@/lib/constants';
+import { getRandomChars } from '@/lib/generate';
 import {
   Button,
   Column,
@@ -9,13 +15,7 @@ import {
   Loading,
   Row,
   TextField,
-} from '@umami/react-zen';
-import { useEffect, useState } from 'react';
-import { useConfig, useMessages, usePixelQuery } from '@/components/hooks';
-import { useUpdateQuery } from '@/components/hooks/queries/useUpdateQuery';
-import { RefreshCw } from '@/components/icons';
-import { PIXELS_URL } from '@/lib/constants';
-import { getRandomChars } from '@/lib/generate';
+} from '@/lib/ui';
 
 const generateId = () => getRandomChars(9);
 

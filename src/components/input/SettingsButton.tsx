@@ -1,13 +1,3 @@
-import {
-  Button,
-  Icon,
-  Menu,
-  MenuItem,
-  MenuSection,
-  MenuSeparator,
-  MenuTrigger,
-  Popover,
-} from '@umami/react-zen';
 import type { Key } from 'react';
 import { useConfig, useLoginQuery, useMessages, useNavigation } from '@/components/hooks';
 import {
@@ -20,6 +10,16 @@ import {
   UserCircle,
 } from '@/components/icons';
 import { DOCS_URL } from '@/lib/constants';
+import {
+  Button,
+  Icon,
+  Menu,
+  MenuItem,
+  MenuSection,
+  MenuSeparator,
+  MenuTrigger,
+  Popover,
+} from '@/lib/ui';
 
 export function SettingsButton() {
   const { formatMessage, labels } = useMessages();

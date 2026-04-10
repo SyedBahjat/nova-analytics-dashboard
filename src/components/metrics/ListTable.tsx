@@ -1,11 +1,11 @@
 import { config, useSpring } from '@react-spring/web';
-import { Column, Grid, Row, Text } from '@umami/react-zen';
 import type { ReactNode } from 'react';
 import { FixedSizeList } from 'react-window';
 import { AnimatedDiv } from '@/components/common/AnimatedDiv';
 import { Empty } from '@/components/common/Empty';
 import { useMessages, useMobile } from '@/components/hooks';
 import { formatLongCurrency, formatLongNumber } from '@/lib/format';
+import { Column, Grid, Row, Text } from '@/lib/ui';
 
 const ITEM_SIZE = 30;
 

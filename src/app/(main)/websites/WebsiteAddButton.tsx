@@ -1,7 +1,7 @@
-import { useToast } from '@umami/react-zen';
 import { useMessages, useModified } from '@/components/hooks';
 import { Plus } from '@/components/icons';
 import { DialogButton } from '@/components/input/DialogButton';
+import { useToast } from '@/lib/ui';
 import { WebsiteAddForm } from './WebsiteAddForm';
 
 export function WebsiteAddButton({ teamId, onSave }: { teamId: string; onSave?: () => void }) {

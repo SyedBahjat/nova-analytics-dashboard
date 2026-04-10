@@ -1,4 +1,3 @@
-import { Box, type BoxProps, Column } from '@umami/react-zen';
 import ChartJS, {
   type ChartData,
   type ChartOptions,
@@ -8,6 +7,7 @@ import ChartJS, {
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Legend } from '@/components/metrics/Legend';
 import { DEFAULT_ANIMATION_DURATION } from '@/lib/constants';
+import { Box, type BoxProps, Column } from '@/lib/ui';
 
 ChartJS.defaults.font.family = 'Inter';
 

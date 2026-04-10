@@ -1,7 +1,7 @@
-import { Icon, Row, Text, ThemeButton } from '@umami/react-zen';
 import { LanguageButton } from '@/components/input/LanguageButton';
 import { PreferencesButton } from '@/components/input/PreferencesButton';
 import { Logo } from '@/components/svg';
+import { Icon, Row, Text, ThemeButton } from '@/lib/ui';
 
 export function Header() {
   return (

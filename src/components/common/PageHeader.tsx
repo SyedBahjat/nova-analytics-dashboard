@@ -1,5 +1,5 @@
-import { Column, Grid, Heading, Icon, Row, Text } from '@umami/react-zen';
 import type { ReactNode } from 'react';
+import { Column, Grid, Heading, Icon, Row, Text } from '@/lib/ui';
 import { LinkButton } from './LinkButton';
 
 export function PageHeader({

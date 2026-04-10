@@ -1,3 +1,6 @@
+import { useMessages, useReportQuery, useUpdateQuery } from '@/components/hooks';
+import { ActionSelect } from '@/components/input/ActionSelect';
+import { LookupField } from '@/components/input/LookupField';
 import {
   Button,
   Column,
@@ -9,10 +12,7 @@ import {
   Label,
   Loading,
   TextField,
-} from '@umami/react-zen';
-import { useMessages, useReportQuery, useUpdateQuery } from '@/components/hooks';
-import { ActionSelect } from '@/components/input/ActionSelect';
-import { LookupField } from '@/components/input/LookupField';
+} from '@/lib/ui';
 
 export function GoalEditForm({
   id,

@@ -1,4 +1,3 @@
-import { Column, Grid, Row, Text } from '@umami/react-zen';
 import classNames from 'classnames';
 import { colord } from 'colord';
 import { useCallback, useMemo, useState } from 'react';
@@ -15,6 +14,7 @@ import { renderDateLabels } from '@/lib/charts';
 import { CHART_COLORS } from '@/lib/constants';
 import { generateTimeSeries } from '@/lib/date';
 import { formatLongCurrency, formatLongNumber } from '@/lib/format';
+import { Column, Grid, Row, Text } from '@/lib/ui';
 
 export interface RevenueProps {
   websiteId: string;

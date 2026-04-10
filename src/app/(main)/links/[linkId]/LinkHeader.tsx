@@ -1,8 +1,8 @@
-import { IconLabel } from '@umami/react-zen';
 import { LinkButton } from '@/components/common/LinkButton';
 import { PageHeader } from '@/components/common/PageHeader';
 import { useLink, useMessages, useSlug } from '@/components/hooks';
 import { ExternalLink, Link } from '@/components/icons';
+import { IconLabel } from '@/lib/ui';
 
 export function LinkHeader() {
   const { formatMessage, labels } = useMessages();

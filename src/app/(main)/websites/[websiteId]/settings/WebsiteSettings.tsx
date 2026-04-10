@@ -1,6 +1,6 @@
-import { Column } from '@umami/react-zen';
 import { Panel } from '@/components/common/Panel';
 import { useWebsite } from '@/components/hooks';
+import { Column } from '@/lib/ui';
 import { WebsiteData } from './WebsiteData';
 import { WebsiteEditForm } from './WebsiteEditForm';
 import { WebsiteShareForm } from './WebsiteShareForm';

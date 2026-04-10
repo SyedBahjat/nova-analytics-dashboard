@@ -1,3 +1,9 @@
+import { isSameDay } from 'date-fns';
+import { LoadingPanel } from '@/components/common/LoadingPanel';
+import { useMessages, useMobile, useSessionActivityQuery, useTimezone } from '@/components/hooks';
+import { Eye, FileText } from '@/components/icons';
+import { EventData } from '@/components/metrics/EventData';
+import { Lightning } from '@/components/svg';
 import {
   Button,
   Column,
@@ -9,13 +15,7 @@ import {
   Row,
   StatusLight,
   Text,
-} from '@umami/react-zen';
-import { isSameDay } from 'date-fns';
-import { LoadingPanel } from '@/components/common/LoadingPanel';
-import { useMessages, useMobile, useSessionActivityQuery, useTimezone } from '@/components/hooks';
-import { Eye, FileText } from '@/components/icons';
-import { EventData } from '@/components/metrics/EventData';
-import { Lightning } from '@/components/svg';
+} from '@/lib/ui';
 
 export function SessionActivity({
   websiteId,

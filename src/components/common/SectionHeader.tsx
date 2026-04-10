@@ -1,5 +1,5 @@
-import { Heading, Icon, Row, type RowProps, Text } from '@umami/react-zen';
 import type { ReactNode } from 'react';
+import { Heading, Icon, Row, type RowProps, Text } from '@/lib/ui';
 
 export function SectionHeader({
   title,

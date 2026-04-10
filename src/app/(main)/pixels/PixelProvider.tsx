@@ -1,8 +1,8 @@
 'use client';
-import { Loading } from '@umami/react-zen';
 import { createContext, type ReactNode } from 'react';
 import { usePixelQuery } from '@/components/hooks/queries/usePixelQuery';
 import type { Pixel } from '@/generated/prisma/client';
+import { Loading } from '@/lib/ui';
 
 export const PixelContext = createContext<Pixel>(null);
 

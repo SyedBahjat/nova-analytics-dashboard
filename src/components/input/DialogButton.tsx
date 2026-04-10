@@ -1,3 +1,5 @@
+import type { CSSProperties, ReactNode } from 'react';
+import { useMobile } from '@/components/hooks';
 import {
   Button,
   type ButtonProps,
@@ -6,9 +8,7 @@ import {
   DialogTrigger,
   IconLabel,
   Modal,
-} from '@umami/react-zen';
-import type { CSSProperties, ReactNode } from 'react';
-import { useMobile } from '@/components/hooks';
+} from '@/lib/ui';
 
 export interface DialogButtonProps extends Omit<ButtonProps, 'children'> {
   icon?: ReactNode;

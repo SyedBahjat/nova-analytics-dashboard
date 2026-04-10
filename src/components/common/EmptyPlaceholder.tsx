@@ -1,5 +1,5 @@
-import { Column, Icon, Text } from '@umami/react-zen';
 import type { ReactNode } from 'react';
+import { Column, Icon, Text } from '@/lib/ui';
 
 export interface EmptyPlaceholderProps {
   title?: string;

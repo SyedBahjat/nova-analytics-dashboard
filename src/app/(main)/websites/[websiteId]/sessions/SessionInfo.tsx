@@ -1,9 +1,9 @@
-import { Column, Grid, Icon, Label, Row } from '@umami/react-zen';
 import type { ReactNode } from 'react';
 import { DateDistance } from '@/components/common/DateDistance';
 import { TypeIcon } from '@/components/common/TypeIcon';
 import { useFormat, useLocale, useMessages, useRegionNames } from '@/components/hooks';
 import { Calendar, KeyRound, Landmark, MapPin } from '@/components/icons';
+import { Column, Grid, Icon, Label, Row } from '@/lib/ui';
 
 export function SessionInfo({ data }) {
   const { locale } = useLocale();

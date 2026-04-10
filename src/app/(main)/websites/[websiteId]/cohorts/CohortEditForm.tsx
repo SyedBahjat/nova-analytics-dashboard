@@ -1,3 +1,8 @@
+import { useMessages, useUpdateQuery, useWebsiteCohortQuery } from '@/components/hooks';
+import { ActionSelect } from '@/components/input/ActionSelect';
+import { DateFilter } from '@/components/input/DateFilter';
+import { FieldFilters } from '@/components/input/FieldFilters';
+import { LookupField } from '@/components/input/LookupField';
 import {
   Button,
   Column,
@@ -9,12 +14,7 @@ import {
   Label,
   Loading,
   TextField,
-} from '@umami/react-zen';
-import { useMessages, useUpdateQuery, useWebsiteCohortQuery } from '@/components/hooks';
-import { ActionSelect } from '@/components/input/ActionSelect';
-import { DateFilter } from '@/components/input/DateFilter';
-import { FieldFilters } from '@/components/input/FieldFilters';
-import { LookupField } from '@/components/input/LookupField';
+} from '@/lib/ui';
 
 export function CohortEditForm({
   cohortId,

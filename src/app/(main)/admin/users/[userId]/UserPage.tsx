@@ -1,7 +1,7 @@
 'use client';
-import { Column } from '@umami/react-zen';
 import { UserHeader } from '@/app/(main)/admin/users/[userId]/UserHeader';
 import { Panel } from '@/components/common/Panel';
+import { Column } from '@/lib/ui';
 import { UserProvider } from './UserProvider';
 import { UserSettings } from './UserSettings';
 

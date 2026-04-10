@@ -1,9 +1,9 @@
 'use client';
-import { Column } from '@umami/react-zen';
 import { WebsiteChart } from '@/app/(main)/websites/[websiteId]/WebsiteChart';
 import { WebsiteControls } from '@/app/(main)/websites/[websiteId]/WebsiteControls';
 import { WebsiteMetricsBar } from '@/app/(main)/websites/[websiteId]/WebsiteMetricsBar';
 import { Panel } from '@/components/common/Panel';
+import { Column } from '@/lib/ui';
 import { CompareTables } from './CompareTables';
 
 export function ComparePage({ websiteId }: { websiteId: string }) {
