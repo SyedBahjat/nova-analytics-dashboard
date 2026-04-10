@@ -59,10 +59,12 @@ export function NavButton({ showText = true }: TeamsButtonProps) {
   const handleAction = async (key: Key) => {
     if (key === 'user') {
       removeItem(LAST_TEAM_CONFIG);
+      // After Nova rebrand, "/" is the public landing page, not the
+      // dashboard. Send the user to their websites list instead.
       if (cloudMode) {
-        window.location.href = '/';
+        window.location.href = '/websites';
       } else {
-        router.push('/');
+        router.push('/websites');
       }
     }
   };

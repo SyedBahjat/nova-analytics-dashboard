@@ -361,7 +361,7 @@ export default function LandingPage() {
                 Features
               </a>
               <a href="#how" className={s.footerLink}>
-                Docs
+                How it works
               </a>
             </div>
           </div>

@@ -92,7 +92,16 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--ink) !important;
+  transition: opacity 0.15s ease;
+}
+
+.brand:hover,
+.brand:active,
+.brand:focus {
+  color: var(--ink) !important;
+  opacity: 0.85;
+  text-decoration: none;
 }
 
 .brandMark {
@@ -222,6 +231,51 @@
 
 .input::placeholder {
   color: var(--ink-3);
+}
+
+/* Password input wrapper — relative box so the eye toggle floats inside */
+.passwordWrap {
+  position: relative;
+  display: block;
+}
+
+.passwordWrap .input {
+  padding-right: 48px;
+}
+
+.eyeBtn {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-3);
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  padding: 0;
+  transition:
+    color 0.15s,
+    background 0.15s;
+}
+
+.eyeBtn:hover {
+  color: var(--accent);
+  background: rgba(214, 255, 92, 0.06);
+}
+
+.eyeBtn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.eyeBtn svg {
+  width: 18px;
+  height: 18px;
 }
 
 .input:hover {

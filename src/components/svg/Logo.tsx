@@ -1,9 +1,12 @@
 import type { SVGProps } from 'react';
 
 /**
- * Nova Analytics logo — a rounded square containing four ascending bars,
- * representing analytics. Uses currentColor so it inherits from the
- * surrounding text color (works in both light and dark themes).
+ * Nova Analytics logo — fixed colors so it renders identically in BOTH
+ * light and dark themes (the previous version used currentColor which
+ * collapsed to white-on-white in dark mode).
+ *
+ * Lime rounded square + dark ascending bars. Same brand mark as the
+ * landing page hero, so visitors see one consistent logo everywhere.
  */
 const SvgLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -14,11 +17,11 @@ const SvgLogo = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 32 32"
     {...props}
   >
-    <rect x={2} y={2} width={28} height={28} rx={7} fill="currentColor" />
+    <rect x={2} y={2} width={28} height={28} rx={7} fill="#d6ff5c" />
     <path
       d="M8 22V13M14 22V9M20 22V15M26 22V11"
-      stroke="white"
-      strokeWidth={2.6}
+      stroke="#0a0908"
+      strokeWidth={2.8}
       strokeLinecap="round"
     />
   </svg>

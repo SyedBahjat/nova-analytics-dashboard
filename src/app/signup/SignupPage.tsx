@@ -6,6 +6,7 @@ import { type FormEvent, useState } from 'react';
 import { setClientAuthToken } from '@/lib/client';
 import { setUser } from '@/store/app';
 import s from '../auth.module.css';
+import { EyeIcon, EyeOffIcon } from '../auth-icons';
 
 /**
  * Nova Analytics — Signup page
@@ -19,6 +20,8 @@ export function SignupPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
@@ -146,17 +149,28 @@ export function SignupPage() {
               <label htmlFor="password" className={s.label}>
                 Password
               </label>
-              <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                className={s.input}
-                placeholder="At least 8 characters"
-                autoComplete="new-password"
-                required
-                disabled={loading}
-              />
+              <div className={s.passwordWrap}>
+                <input
+                  id="password"
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
+                  className={s.input}
+                  placeholder="At least 8 characters"
+                  autoComplete="new-password"
+                  required
+                  disabled={loading}
+                />
+                <button
+                  type="button"
+                  className={s.eyeBtn}
+                  onClick={() => setShowPassword(v => !v)}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  tabIndex={-1}
+                >
+                  {showPassword ? <EyeOffIcon /> : <EyeIcon />}
+                </button>
+              </div>
               {fieldErrors.password && <div className={s.fieldError}>{fieldErrors.password}</div>}
             </div>
 
@@ -164,17 +178,28 @@ export function SignupPage() {
               <label htmlFor="confirm" className={s.label}>
                 Confirm password
               </label>
-              <input
-                id="confirm"
-                type="password"
-                value={confirm}
-                onChange={e => setConfirm(e.target.value)}
-                className={s.input}
-                placeholder="Re-enter password"
-                autoComplete="new-password"
-                required
-                disabled={loading}
-              />
+              <div className={s.passwordWrap}>
+                <input
+                  id="confirm"
+                  type={showConfirm ? 'text' : 'password'}
+                  value={confirm}
+                  onChange={e => setConfirm(e.target.value)}
+                  className={s.input}
+                  placeholder="Re-enter password"
+                  autoComplete="new-password"
+                  required
+                  disabled={loading}
+                />
+                <button
+                  type="button"
+                  className={s.eyeBtn}
+                  onClick={() => setShowConfirm(v => !v)}
+                  aria-label={showConfirm ? 'Hide password' : 'Show password'}
+                  tabIndex={-1}
+                >
+                  {showConfirm ? <EyeOffIcon /> : <EyeIcon />}
+                </button>
+              </div>
               {fieldErrors.confirm && <div className={s.fieldError}>{fieldErrors.confirm}</div>}
             </div>
 

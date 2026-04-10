@@ -1,8 +1,9 @@
 import type { SVGProps } from 'react';
 
 /**
- * Nova Analytics logo (white variant) — used on dark backgrounds where
- * the regular Logo's currentColor would be hard to read.
+ * Nova Analytics logo — same fixed colors as the regular Logo so the
+ * brand mark stays consistent everywhere it appears, regardless of the
+ * surrounding theme.
  */
 const SvgLogoWhite = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -13,11 +14,11 @@ const SvgLogoWhite = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 32 32"
     {...props}
   >
-    <rect x={2} y={2} width={28} height={28} rx={7} fill="#fff" />
+    <rect x={2} y={2} width={28} height={28} rx={7} fill="#d6ff5c" />
     <path
       d="M8 22V13M14 22V9M20 22V15M26 22V11"
-      stroke="#0a0a0a"
-      strokeWidth={2.6}
+      stroke="#0a0908"
+      strokeWidth={2.8}
       strokeLinecap="round"
     />
   </svg>

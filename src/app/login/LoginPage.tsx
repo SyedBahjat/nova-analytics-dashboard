@@ -6,6 +6,7 @@ import { type FormEvent, useState } from 'react';
 import { setClientAuthToken } from '@/lib/client';
 import { setUser } from '@/store/app';
 import s from '../auth.module.css';
+import { EyeIcon, EyeOffIcon } from '../auth-icons';
 
 /**
  * Nova Analytics — Login page
@@ -16,6 +17,7 @@ export function LoginPage() {
   const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -34,7 +36,18 @@ export function LoginPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data?.error?.message || 'Invalid credentials. Please try again.');
+        // Map API error codes to friendly messages instead of leaking
+        // raw codes like "Unauthorized" to the user.
+        const code = data?.error?.code;
+        const friendly =
+          code === 'incorrect-username-password'
+            ? 'Wrong username or password. Please try again.'
+            : res.status === 401 || res.status === 403
+              ? 'Wrong username or password. Please try again.'
+              : code === 'bad-request'
+                ? 'Please fill in both fields.'
+                : 'Something went wrong. Please try again.';
+        setError(friendly);
         return;
       }
 
@@ -86,7 +99,7 @@ export function LoginPage() {
                 value={username}
                 onChange={e => setUsername(e.target.value)}
                 className={s.input}
-                placeholder="admin@novaanalytics.io"
+                placeholder="Enter your username or email"
                 autoComplete="username"
                 required
                 disabled={loading}
@@ -97,17 +110,28 @@ export function LoginPage() {
               <label htmlFor="password" className={s.label}>
                 Password
               </label>
-              <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                className={s.input}
-                placeholder="••••••••"
-                autoComplete="current-password"
-                required
-                disabled={loading}
-              />
+              <div className={s.passwordWrap}>
+                <input
+                  id="password"
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
+                  className={s.input}
+                  placeholder="Enter your password"
+                  autoComplete="current-password"
+                  required
+                  disabled={loading}
+                />
+                <button
+                  type="button"
+                  className={s.eyeBtn}
+                  onClick={() => setShowPassword(v => !v)}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  tabIndex={-1}
+                >
+                  {showPassword ? <EyeOffIcon /> : <EyeIcon />}
+                </button>
+              </div>
             </div>
 
             <button type="submit" className={s.submit} disabled={loading}>
@@ -118,12 +142,6 @@ export function LoginPage() {
           <div className={s.altLink}>
             Don&apos;t have an account?
             <Link href="/signup">Sign up</Link>
-          </div>
-
-          <div className={s.demoBox}>
-            <strong>Demo credentials</strong>
-            <br />
-            admin@novaanalytics.io / NovaAnalytics2026!
           </div>
         </div>
 

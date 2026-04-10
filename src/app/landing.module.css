@@ -94,7 +94,16 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--ink) !important;
+  transition: opacity 0.15s ease;
+}
+
+.brand:hover,
+.brand:active,
+.brand:focus {
+  color: var(--ink) !important;
+  opacity: 0.85;
+  text-decoration: none;
 }
 
 .brandMark {
@@ -465,6 +474,13 @@
 /* ─── Section ─── */
 .section {
   padding: 120px 0;
+  /* Anchor-scroll target offset so the sticky nav (72px) doesn't cover the
+     section header when you click an in-page link like #features or #how. */
+  scroll-margin-top: 90px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {
