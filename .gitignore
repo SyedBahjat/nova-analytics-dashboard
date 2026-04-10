@@ -40,6 +40,8 @@ yarn-error.log*
 .env
 .env.*
 *.env.*
+# …but keep the example file so contributors know which vars to set
+!.env.example
 
 *.dev.yml
 
