@@ -40,13 +40,15 @@ export function LoginPage() {
         // raw codes like "Unauthorized" to the user.
         const code = data?.error?.code;
         const friendly =
-          code === 'incorrect-username-password'
-            ? 'Wrong username or password. Please try again.'
-            : res.status === 401 || res.status === 403
+          code === 'rate-limited'
+            ? data?.error?.message || 'Too many login attempts. Please wait a moment and try again.'
+            : code === 'incorrect-username-password'
               ? 'Wrong username or password. Please try again.'
-              : code === 'bad-request'
-                ? 'Please fill in both fields.'
-                : 'Something went wrong. Please try again.';
+              : res.status === 401 || res.status === 403
+                ? 'Wrong username or password. Please try again.'
+                : code === 'bad-request'
+                  ? 'Please fill in both fields.'
+                  : 'Something went wrong. Please try again.';
         setError(friendly);
         return;
       }

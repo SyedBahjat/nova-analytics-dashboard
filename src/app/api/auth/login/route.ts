@@ -4,12 +4,20 @@ import { ROLES } from '@/lib/constants';
 import { secret } from '@/lib/crypto';
 import { createSecureToken } from '@/lib/jwt';
 import { checkPassword } from '@/lib/password';
+import { checkRateLimit, getClientIp, rateLimitedResponse } from '@/lib/rate-limit';
 import redis from '@/lib/redis';
 import { parseRequest } from '@/lib/request';
 import { json, unauthorized } from '@/lib/response';
 import { getAllUserTeams, getUserByUsername } from '@/queries/prisma';
 
 export async function POST(request: Request) {
+  // Rate limit per client IP — prevents credential stuffing.
+  const ip = getClientIp(request);
+  const limit = checkRateLimit(`login:${ip}`);
+  if (!limit.ok) {
+    return rateLimitedResponse(limit.retryAfterSeconds);
+  }
+
   const schema = z.object({
     username: z.string(),
     password: z.string(),

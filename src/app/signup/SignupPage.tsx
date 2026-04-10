@@ -22,6 +22,8 @@ export function SignupPage() {
   const [confirm, setConfirm] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  // Honeypot — must stay empty. Bots fill every field; humans never see this.
+  const [companyWebsite, setCompanyWebsite] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
@@ -56,6 +58,7 @@ export function SignupPage() {
           username: username.trim(),
           email: email.trim().toLowerCase(),
           password,
+          company_website: companyWebsite,
         }),
       });
 
@@ -63,8 +66,12 @@ export function SignupPage() {
 
       if (!res.ok) {
         const code = data?.error?.code;
-        if (code === 'username-already-exists') {
-          setError('That username is already taken — try another one.');
+        if (code === 'rate-limited') {
+          setError(
+            data?.error?.message || 'Too many attempts. Please wait a moment and try again.',
+          );
+        } else if (code === 'account-creation-failed') {
+          setError('Could not create your account. Please try a different username.');
         } else {
           setError(data?.error?.message || 'Could not create your account. Please try again.');
         }
@@ -108,6 +115,34 @@ export function SignupPage() {
 
           <form onSubmit={handleSubmit} className={s.form} noValidate>
             {error && <div className={s.formError}>{error}</div>}
+
+            {/*
+              Honeypot field. Hidden from humans (off-screen + tab-skipped +
+              aria-hidden + autocomplete off) but bots that auto-fill every
+              input will populate it. Server silently rejects any submission
+              where it's non-empty.
+            */}
+            <div
+              aria-hidden="true"
+              style={{
+                position: 'absolute',
+                left: '-10000px',
+                width: '1px',
+                height: '1px',
+                overflow: 'hidden',
+              }}
+            >
+              <label htmlFor="company_website">Company website (leave blank)</label>
+              <input
+                id="company_website"
+                name="company_website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={companyWebsite}
+                onChange={e => setCompanyWebsite(e.target.value)}
+              />
+            </div>
 
             <div className={s.field}>
               <label htmlFor="username" className={s.label}>
